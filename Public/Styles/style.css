@@ -1,0 +1,41 @@
+.test {
+    color:pink;
+    font-size: medium;
+    font-family: Arial, Helvetica, sans-serif
+}
+.test2 {
+    color:black;
+    font-size: medium;
+    font-family: Arial, Helvetica, sans-serif
+}
+.class {
+    color:maroon;
+    font-size: medium;
+    font-family: Arial, Helvetica, sans-serif
+}
+h1{
+    color: green;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+h2{
+    color: purple;
+    font-family: 'Times New Roman', Times, serif;
+}
+form{
+    color: orange;
+    font-size: medium;
+}
+input{
+    margin: 10px;
+}
+img{
+    width: 300px;
+}
+section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+    
