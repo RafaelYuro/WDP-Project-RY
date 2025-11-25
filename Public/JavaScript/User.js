@@ -16,6 +16,7 @@ function Register(e){
     }
     console.log("hi")
     console.log(User)
+    window.location.href = "Main Menu.html"
 }
 //1. Store form in varable.
 let LoginForm = document.getElementById("LoginForm")
@@ -33,4 +34,5 @@ function Login(x){
     }
     console.log("hi")
     console.log(User1)
+    window.location.href = "Main Menu.html"
 }

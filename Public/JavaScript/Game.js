@@ -8,4 +8,5 @@ function StartGame(g){
     console.log("hi")
     // 4. Create user object.
     console.log("game started!")
+    window.location.href = "Main Menu.html"
 }
