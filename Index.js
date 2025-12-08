@@ -5,6 +5,8 @@ const app = express()
 app.use(express.json())
 
 const playerRoutes = require("./Server/Routes/PlayerRoutes")
+const characterRoutes = require("./Server/Routes/CharacterRoutes")
+
 
 //CORS middleware
 app.use(function(req, res, next) {
@@ -15,6 +17,7 @@ app.use(function(req, res, next) {
 });
 
 app.use("/player", playerRoutes)
+app.use("/character", characterRoutes)
 /* I have a route called getRecipes under recipeRoutes below.
    What is the fetch url to call it? It is a get request.
 */

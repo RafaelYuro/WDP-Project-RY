@@ -1,3 +1,4 @@
+import { fetchData } from "./Main.js"
 //1. Store form in varable.
 let RegisterationForm = document.getElementById("RegisterForm")
 //2. Add event listener.
@@ -7,16 +8,21 @@ function Register(e){
     e.preventDefault()
     console.log("hi")
     // 4. Create user object.
-    const User = {
-        FirstName: document.getElementById("fname").value,
-        LastName: document.getElementById("lname").value,
-        UserName: document.getElementById("username").value,
-        Email: document.getElementById("email").value,
-        Password: document.getElementById("pwd").value
+    const player = {
+        first_name: document.getElementById("fname").value,
+        last_name: document.getElementById("lname").value,
+        username: document.getElementById("username").value,
+        email: document.getElementById("email").value,
+        password: document.getElementById("pwd").value
     }
-    console.log("hi")
-    console.log(User)
-    window.location.href = "Main Menu.html"
+    fetchData("/player/register", player, "POST")
+    .then(data=> {
+        console.log(data)
+    })
+    .catch(err => {
+      console.log(err)  
+    })
+    //window.location.href = "Main Menu.html"
 }
 //1. Store form in varable.
 let LoginForm = document.getElementById("LoginForm")
@@ -27,12 +33,17 @@ function Login(x){
     x.preventDefault()
     console.log("hi")
     // 4. Create user object.
-    const User1 = {
-        UserName: document.getElementById("username").value,
-        Email: document.getElementById("email").value,
-        Password: document.getElementById("pwd").value
+    const player = {
+        username: document.getElementById("username").value,
+        email: document.getElementById("email").value,
+        password: document.getElementById("pwd").value
     }
-    console.log("hi")
-    console.log(User1)
-    window.location.href = "Main Menu.html"
+     fetchData("/player/login", player, "POST")
+    .then(data=> {
+        console.log(data)
+        window.location.href = "Main Menu.html"
+    })
+    .catch(err => {
+      console.log(err)  
+    })
 }
