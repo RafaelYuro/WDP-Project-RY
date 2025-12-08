@@ -16,7 +16,7 @@ router.get('/getCharacters', (req, res) => {
 //functions below fpor characters route file
 // http method that calls the function in your model file (http methods)
 
-.post('/createcharacter', async (req, res)=>{
+.post('/getcharacter', async (req, res)=>{
   try {
     const character = await character.createcharacter(req.body)
     res.send({...character, character_name: undefined})
@@ -24,7 +24,7 @@ router.get('/getCharacters', (req, res) => {
     res.status(401).send({message:err.message})
   }
 })
-.post('/register', async (req, res)=>{
+.post('/createcharacter', async (req, res)=>{
   try {
     const character = await character.register(req.body)
     res.send({...character, character_name: undefined})

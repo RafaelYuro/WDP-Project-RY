@@ -58,5 +58,5 @@ async function updatecharacter_name(character) {
     `
     await con.query(sql)
 }
-module.exports = { getAllcharacter, createcharacter, register, deletecharacter, updatecharacter_name }
+module.exports = { createcharacter, register, deletecharacter, updatecharacter_name }
 //functions above for characters model file
